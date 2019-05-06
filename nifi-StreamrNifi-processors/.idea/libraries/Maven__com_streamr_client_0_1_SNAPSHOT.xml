@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.streamr:client:0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/streamr/client/0.1-SNAPSHOT/client-0.1-20190429.085957-10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/streamr/client/0.1-SNAPSHOT/client-0.1-20190429.085957-10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/streamr/client/0.1-SNAPSHOT/client-0.1-20190429.085957-10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

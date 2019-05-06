@@ -1,0 +1,16 @@
+10:20:04.875 DEBUG [o.c.c.u.Log]  New instance, using SLF4J logging
+10:20:04.913 INFO [o.c.c.Cache2kCoreProviderImpl]  cache2k starting. version=1.2.1.Final
+10:20:04.961 DEBUG [o.c.i.s.JmxSupport]  Manager created and registered as: org.cache2k:type=CacheManager,name=default
+10:20:04.962 DEBUG [o.c.C.default]  open: name='default', objectId=c8k762, classloaderId=twl4yc, default=true
+10:21:47.761 DEBUG [o.c.c.u.Log]  New instance, using SLF4J logging
+10:21:47.776 INFO [o.c.c.Cache2kCoreProviderImpl]  cache2k starting. version=1.2.1.Final
+10:21:47.792 DEBUG [o.c.i.s.JmxSupport]  Manager created and registered as: org.cache2k:type=CacheManager,name=default
+10:21:47.792 DEBUG [o.c.C.default]  open: name='default', objectId=c8k762, classloaderId=twl4yc, default=true
+10:45:47.904 DEBUG [o.c.c.u.Log]  New instance, using SLF4J logging
+10:45:47.906 INFO [o.c.c.Cache2kCoreProviderImpl]  cache2k starting. version=1.2.1.Final
+10:45:47.939 DEBUG [o.c.i.s.JmxSupport]  Manager created and registered as: org.cache2k:type=CacheManager,name=default
+10:45:47.939 DEBUG [o.c.C.default]  open: name='default', objectId=c8k762, classloaderId=twl4yc, default=true
+10:58:29.661 DEBUG [o.c.c.u.Log]  New instance, using SLF4J logging
+10:58:29.672 INFO [o.c.c.Cache2kCoreProviderImpl]  cache2k starting. version=1.2.1.Final
+10:58:29.683 DEBUG [o.c.i.s.JmxSupport]  Manager created and registered as: org.cache2k:type=CacheManager,name=default
+10:58:29.683 DEBUG [o.c.C.default]  open: name='default', objectId=skfcco, classloaderId=twl4yc, default=true
