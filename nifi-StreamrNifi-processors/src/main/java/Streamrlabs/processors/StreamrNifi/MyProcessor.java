@@ -31,6 +31,7 @@ import org.apache.nifi.annotation.lifecycle.OnScheduled;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
 import org.apache.nifi.annotation.documentation.SeeAlso;
 import org.apache.nifi.annotation.documentation.Tags;
+import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.AbstractProcessor;
 import org.apache.nifi.processor.ProcessContext;
@@ -51,6 +52,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.LinkedBlockingQueue;
 
 @Tags({"example"})
 @CapabilityDescription("Provide a description")
@@ -58,11 +60,15 @@ import java.util.Set;
 @ReadsAttributes({@ReadsAttribute(attribute="", description="")})
 @WritesAttributes({@WritesAttribute(attribute="", description="")})
 @InputRequirement(InputRequirement.Requirement.INPUT_FORBIDDEN)
+@TriggerSerially
 public class MyProcessor extends AbstractProcessor {
     private StreamrClient client;
     private Stream stream;
     private Subscription sub;
     private StreamrMessageHandler msgHandler;
+    private ComponentLog log;
+    private volatile LinkedBlockingQueue<StreamMessage> messageQueue;
+
 
     public static final PropertyDescriptor STREAMR_API_KEY = new PropertyDescriptor
             .Builder().name("STREAMR_API_KEY")
@@ -101,6 +107,8 @@ public class MyProcessor extends AbstractProcessor {
         final Set<Relationship> relationships = new HashSet<>();
         relationships.add(MY_RELATIONSHIP);
         this.relationships = Collections.unmodifiableSet(relationships);
+        this.log = getLogger();
+        this.messageQueue = new LinkedBlockingQueue<>();
     }
 
     @Override
@@ -117,21 +125,41 @@ public class MyProcessor extends AbstractProcessor {
     public void onScheduled(final ProcessContext context) {
         setNewStreamrClient(context);
         setStream(context);
-        this.msgHandler =  new StreamrMessageHandler();
-        this.sub = client.subscribe(this.stream, this.msgHandler);
+        this.msgHandler =  new StreamrMessageHandler(this.log);
+        this.sub = client.subscribe(this.stream, new MessageHandler() {
+            @Override
+            public void onMessage(Subscription subscription, StreamMessage streamMessage) {
+                try {
+                    messageQueue.put(streamMessage);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
     public void onTrigger(final ProcessContext context, final ProcessSession session) throws ProcessException {
-        FlowFile flow = session.get();
-        if (flow == null) {
-            flow = session.create();
-            this.msgHandler.setSession(session);
+        if (messageQueue.isEmpty()) {
+            return;
         }
-
-        session.transfer(flow, MY_RELATIONSHIP);
+        transferQueue(session);
     }
 
+    private void transferQueue(ProcessSession session) {
+        while (!messageQueue.isEmpty()) {
+            FlowFile flow = session.create();
+            final StreamMessage streamMsg = messageQueue.peek();
+            flow = session.write(flow, new OutputStreamCallback() {
+                @Override
+                public void process(OutputStream out) throws IOException {
+                    out.write(streamMsg.toBytes());
+                }
+            });
+            session.transfer(flow, MY_RELATIONSHIP);
+            session.commit();
+        }
+    }
 
     public void setNewStreamrClient(final ProcessContext context) {
         try {
