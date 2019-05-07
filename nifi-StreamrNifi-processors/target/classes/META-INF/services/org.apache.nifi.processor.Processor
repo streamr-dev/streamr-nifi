@@ -13,3 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 Streamrlabs.processors.StreamrNifi.StreamrSubscribe
+Streamrlabs.processors.StreamrNifi.StreamrPublish
