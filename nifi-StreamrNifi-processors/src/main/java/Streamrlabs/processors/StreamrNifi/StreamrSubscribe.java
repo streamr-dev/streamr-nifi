@@ -49,7 +49,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.LinkedBlockingQueue;
 
-@Tags({"example"})
+@Tags({"Subscribe, Streamr, IOT"})
 @CapabilityDescription("Provide a description")
 @SeeAlso({})
 @ReadsAttributes({@ReadsAttribute(attribute="", description="")})
@@ -155,13 +155,13 @@ public class StreamrSubscribe extends AbstractProcessor {
     private void transferQueue(ProcessSession session) {
         while (!messageQueue.isEmpty()) {
             FlowFile flow = session.create();
-            final StreamMessage streamMsg = messageQueue.peek();
+            final StreamMessage streamMsg = messageQueue.poll();
             flow = session.write(flow, new OutputStreamCallback() {
                 @Override
                 public void process(OutputStream out) throws IOException {
 
                     ObjectOutputStream oOut = new ObjectOutputStream(out);
-                    oOut.writeObject(streamMsg.toJson());
+                    oOut.writeUTF(streamMsg.toJson());
                 }
             });
             session.transfer(flow, SUCCESS);
