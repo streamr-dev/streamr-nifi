@@ -5,20 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e63522a4-d4d6-4d8e-adca-11a99c2906fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/MyProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/MyProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Streamrlabs/processors/StreamrNifi/MyProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/services/org.apache.nifi.processor.Processor" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/services/org.apache.nifi.processor.Processor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/MyProcessor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/MyProcessor$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/MyProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/groovy-tests/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/groovy-tests/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.MyProcessorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.MyProcessorTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.MyProcessorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.MyProcessorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.MyProcessorTest-output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest-output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.MyProcessorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.MyProcessorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Streamrlabs/processors/StreamrNifi/MyProcessorTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,30 +52,14 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
+            <state relative-caret-position="201">
+              <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4809#4810#0" expanded="true" />
-                <element signature="e#4936#4937#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
+                <element signature="e#4595#4596#0" expanded="true" />
+                <element signature="e#4722#4723#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,6 +101,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" />
       </list>
     </option>
   </component>
@@ -198,25 +197,34 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49930266" visible="true" weight="0.24749643" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979253" visible="true" weight="0.24749643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5006974" side_tool="true" visible="true" weight="0.24749643" />
-      <window_info anchor="bottom" id="Messages" weight="0.32775453" />
+      <window_info id="Favorites" order="6" sideWeight="0.5020747" side_tool="true" visible="true" weight="0.24749643" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32775453" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914925" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -235,13 +243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -266,14 +267,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
+        <state relative-caret-position="333">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4809#4810#0" expanded="true" />
-            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
           </folding>
         </state>
       </provider>
