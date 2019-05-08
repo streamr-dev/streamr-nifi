@@ -33,6 +33,7 @@ import org.apache.nifi.annotation.lifecycle.OnScheduled;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
 import org.apache.nifi.annotation.documentation.SeeAlso;
 import org.apache.nifi.annotation.documentation.Tags;
+import org.apache.nifi.flowfile.attributes.CoreAttributes;
 import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
@@ -42,11 +43,7 @@ import org.apache.nifi.processor.util.StandardValidators;
 
 import java.io.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
 @Tags({"Subscribe, Streamr, IOT"})
@@ -103,7 +100,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         relationships.add(SUCCESS);
         this.relationships = Collections.unmodifiableSet(relationships);
         this.log = getLogger();
-        this.messageQueue = new LinkedBlockingQueue<>();
+        this.messageQueue = new LinkedBlockingQueue<>(10000);
         this.subscribed = false;
     }
 
@@ -146,24 +143,27 @@ public class StreamrSubscribe extends AbstractProcessor {
         if (!subscribed) {
             subscribe();
         }
-        if (messageQueue.isEmpty()) {
-            return;
-        }
         transferQueue(session);
+        stream.getConfig();
     }
 
     private void transferQueue(ProcessSession session) {
         while (!messageQueue.isEmpty()) {
             FlowFile flow = session.create();
             final StreamMessage streamMsg = messageQueue.poll();
+            Map<String, String> attrs = new HashMap<>();
+            attrs.put("streamr.timestamp", Long.toString(streamMsg.getTimestamp()));
+            attrs.put("streamr.version", Integer.toString(streamMsg.getVersion()));
+            attrs.put("streamr.streamId", streamMsg.getStreamId());
+            flow = session.putAllAttributes(flow, attrs);
+
             flow = session.write(flow, new OutputStreamCallback() {
                 @Override
                 public void process(OutputStream out) throws IOException {
-
-                    ObjectOutputStream oOut = new ObjectOutputStream(out);
-                    oOut.writeUTF(streamMsg.toJson());
+                    out.write(streamMsg.getSerializedContent().getBytes());
                 }
             });
+
             session.transfer(flow, SUCCESS);
             session.commit();
         }
