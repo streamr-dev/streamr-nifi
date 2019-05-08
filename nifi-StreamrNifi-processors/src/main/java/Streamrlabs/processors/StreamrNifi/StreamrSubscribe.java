@@ -191,7 +191,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         }
     }
 
-    public void setNewStreamrClient(final ProcessContext context) {
+    private void setNewStreamrClient(final ProcessContext context) {
         try {
             this.client = new StreamrClient(new StreamrClientOptions(
                     new ApiKeyAuthenticationMethod(context.getProperty("STREAMR_API_KEY").getValue()),
@@ -225,7 +225,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         }
     }
 
-    public void setStream(final ProcessContext context) {
+    private void setStream(final ProcessContext context) {
         try {
             this.stream = client.getStream(context.getProperty("STREAMR_STREAM_ID").getValue());
         } catch (IOException e) {
