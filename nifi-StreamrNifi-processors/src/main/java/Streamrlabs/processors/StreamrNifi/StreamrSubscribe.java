@@ -81,15 +81,6 @@ public class StreamrSubscribe extends AbstractProcessor {
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .build();
 
-    public static final PropertyDescriptor PAYLOAD_AS_ATTRIBUTE = new PropertyDescriptor
-            .Builder().name("PAYLOAD_AS_ATTRIBUTE")
-            .displayName("Payload as attribute")
-            .description("Used to push payload to attributes, use if you wish to use AttributesAsJson processor to gain access to the metadata of the stream in ")
-            .required(true)
-            .allowableValues("true", "false")
-            .defaultValue("false")
-            .build();
-
     public static final Relationship SUCCESS = new Relationship
             .Builder().name("SUCCESS")
             .description("Relationship")
@@ -109,7 +100,6 @@ public class StreamrSubscribe extends AbstractProcessor {
         final List<PropertyDescriptor> descriptors = new ArrayList<PropertyDescriptor>();
         descriptors.add(STREAMR_STREAM_ID);
         descriptors.add(STREAMR_API_KEY);
-        descriptors.add(PAYLOAD_AS_ATTRIBUTE);
 
         this.descriptors = Collections.unmodifiableList(descriptors);
         final Set<Relationship> relationships = new HashSet<>();
@@ -160,11 +150,11 @@ public class StreamrSubscribe extends AbstractProcessor {
         if (!subscribed) {
             subscribe();
         }
-        transferQueue(session);
+        transferQueue(session, context);
         stream.getConfig();
     }
 
-    private void transferQueue(ProcessSession session) {
+    private void transferQueue(ProcessSession session, final ProcessContext context) {
         while (!messageQueue.isEmpty()) {
             FlowFile flow = session.create();
             try {
@@ -175,9 +165,7 @@ public class StreamrSubscribe extends AbstractProcessor {
                 attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
                 attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
                 attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
-                if (PAYLOAD_AS_ATTRIBUTE.equals("true")) {
-                    attrs.put("streamrMsg.payload", streamMsg.getSerializedContent());
-                }
+
                 flow = session.putAllAttributes(flow, attrs);
                 flow = session.write(flow, new OutputStreamCallback() {
                     @Override
