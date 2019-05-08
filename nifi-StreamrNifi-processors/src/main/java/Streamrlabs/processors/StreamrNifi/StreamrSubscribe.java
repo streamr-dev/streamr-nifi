@@ -81,6 +81,15 @@ public class StreamrSubscribe extends AbstractProcessor {
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .build();
 
+    public static final PropertyDescriptor PAYLOAD_AS_ATTRIBUTE = new PropertyDescriptor
+            .Builder().name("PAYLOAD_AS_ATTRIBUTE")
+            .displayName("Payload as attribute")
+            .description("Used to push payload to attributes, use if you wish to use AttributesAsJson processor to gain access to the metadata of the stream in ")
+            .required(true)
+            .allowableValues("true", "false")
+            .defaultValue("false")
+            .build();
+
     public static final Relationship SUCCESS = new Relationship
             .Builder().name("SUCCESS")
             .description("Relationship")
@@ -100,9 +109,12 @@ public class StreamrSubscribe extends AbstractProcessor {
         final List<PropertyDescriptor> descriptors = new ArrayList<PropertyDescriptor>();
         descriptors.add(STREAMR_STREAM_ID);
         descriptors.add(STREAMR_API_KEY);
+        descriptors.add(PAYLOAD_AS_ATTRIBUTE);
+
         this.descriptors = Collections.unmodifiableList(descriptors);
         final Set<Relationship> relationships = new HashSet<>();
         relationships.add(SUCCESS);
+        relationships.add(FAILURE);
         this.relationships = Collections.unmodifiableSet(relationships);
         this.log = getLogger();
         this.messageQueue = new LinkedBlockingQueue<>(10000);
@@ -163,7 +175,9 @@ public class StreamrSubscribe extends AbstractProcessor {
                 attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
                 attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
                 attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
-                attrs.put("streamrMsg.payload", streamMsg.getSerializedContent());
+                if (PAYLOAD_AS_ATTRIBUTE.equals("true")) {
+                    attrs.put("streamrMsg.payload", streamMsg.getSerializedContent());
+                }
                 flow = session.putAllAttributes(flow, attrs);
                 flow = session.write(flow, new OutputStreamCallback() {
                     @Override
