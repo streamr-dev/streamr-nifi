@@ -152,9 +152,11 @@ public class StreamrSubscribe extends AbstractProcessor {
             FlowFile flow = session.create();
             final StreamMessage streamMsg = messageQueue.poll();
             Map<String, String> attrs = new HashMap<>();
-            attrs.put("streamr.timestamp", Long.toString(streamMsg.getTimestamp()));
-            attrs.put("streamr.version", Integer.toString(streamMsg.getVersion()));
-            attrs.put("streamr.streamId", streamMsg.getStreamId());
+            attrs.put("streamrMsg.timestamp", Long.toString(streamMsg.getTimestamp()));
+            attrs.put("streamrMsg.version", Integer.toString(streamMsg.getVersion()));
+            attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
+            attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
+            attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
             flow = session.putAllAttributes(flow, attrs);
 
             flow = session.write(flow, new OutputStreamCallback() {
