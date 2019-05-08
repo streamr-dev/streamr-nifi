@@ -86,6 +86,11 @@ public class StreamrSubscribe extends AbstractProcessor {
             .description("Relationship")
             .build();
 
+    public static final Relationship FAILURE = new Relationship
+            .Builder().name("FAILURE")
+            .description("Relationship")
+            .build();
+
     private List<PropertyDescriptor> descriptors;
 
     private Set<Relationship> relationships;
@@ -150,24 +155,37 @@ public class StreamrSubscribe extends AbstractProcessor {
     private void transferQueue(ProcessSession session) {
         while (!messageQueue.isEmpty()) {
             FlowFile flow = session.create();
-            final StreamMessage streamMsg = messageQueue.poll();
-            Map<String, String> attrs = new HashMap<>();
-            attrs.put("streamrMsg.timestamp", Long.toString(streamMsg.getTimestamp()));
-            attrs.put("streamrMsg.version", Integer.toString(streamMsg.getVersion()));
-            attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
-            attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
-            attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
-            flow = session.putAllAttributes(flow, attrs);
+            try {
+                final StreamMessage streamMsg = messageQueue.poll();
+                Map<String, String> attrs = new HashMap<>();
+                attrs.put("streamrMsg.timestamp", Long.toString(streamMsg.getTimestamp()));
+                attrs.put("streamrMsg.version", Integer.toString(streamMsg.getVersion()));
+                attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
+                attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
+                attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
+                attrs.put("streamrMsg.payload", streamMsg.getSerializedContent());
+                flow = session.putAllAttributes(flow, attrs);
+                flow = session.write(flow, new OutputStreamCallback() {
+                    @Override
+                    public void process(OutputStream out) throws IOException {
+                        out.write(streamMsg.getSerializedContent().getBytes());
+                    }
+                });
 
-            flow = session.write(flow, new OutputStreamCallback() {
-                @Override
-                public void process(OutputStream out) throws IOException {
-                    out.write(streamMsg.getSerializedContent().getBytes());
-                }
-            });
-
-            session.transfer(flow, SUCCESS);
-            session.commit();
+                session.transfer(flow, SUCCESS);
+                session.commit();
+            }
+            catch (Exception e) {
+                session.putAttribute(flow,"Error", e.toString());
+                flow = session.write(flow, new OutputStreamCallback() {
+                    @Override
+                    public void process(OutputStream out) throws IOException {
+                        out.write(e.toString().getBytes());
+                    }
+                });
+                session.transfer(flow, FAILURE);
+                session.commit();
+            }
         }
     }
 
