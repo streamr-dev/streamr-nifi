@@ -30,7 +30,7 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-@Tags({"publish", "Streamr", "IOT"})
+@Tags({"Publish", "Streamr", "IOT"})
 @CapabilityDescription("Publishes a message to Streamr")
 @SeeAlso({})
 @ReadsAttributes({@ReadsAttribute(attribute="", description="")})
@@ -47,7 +47,7 @@ public class StreamrPublish extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_API_KEY = new PropertyDescriptor
             .Builder().name("STREAMR_API_KEY")
             .displayName("Streamr api key")
-            .description("Profile API key for Streamr")
+            .description("Profile API key for Streamr. Your Streamr API key can be found in Streamr's editor under your profile.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -57,12 +57,11 @@ public class StreamrPublish extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_STREAM_ID = new PropertyDescriptor
             .Builder().name("STREAMR_STREAM_ID")
             .displayName("Stream id")
-            .description("Streams ID")
-            .required(true)
+            .description("You can find your stream's ID in Streamr's editor. The stream has to be created before it can be used.")
             .dynamic(true)
+            .required(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .build();
-
 
     private List<PropertyDescriptor> descriptors;
 
@@ -106,9 +105,7 @@ public class StreamrPublish extends AbstractProcessor {
     public void onScheduled(final ProcessContext context) {
         setNewStreamrClient(context);
         setStream(context);
-
     }
-
 
     @Override
     public void onTrigger(final ProcessContext context, final ProcessSession session) throws ProcessException {
@@ -124,8 +121,7 @@ public class StreamrPublish extends AbstractProcessor {
             }
         });
         String json = new String(messageContent);
-        ObjectMapper mapper = new ObjectMapper();
-
+        final ObjectMapper mapper = new ObjectMapper();
         try {
             LinkedHashMap<String, Object> msg = mapper.readValue(json, LinkedHashMap.class);
             publish(msg);
@@ -134,6 +130,7 @@ public class StreamrPublish extends AbstractProcessor {
         }
         catch (Exception e) {
             session.transfer(flow, FAILURE);
+            session.commit();
         }
     }
 
@@ -153,6 +150,7 @@ public class StreamrPublish extends AbstractProcessor {
             e.printStackTrace();
         }
     }
+
 
     private void setStream(final ProcessContext context) {
         try {

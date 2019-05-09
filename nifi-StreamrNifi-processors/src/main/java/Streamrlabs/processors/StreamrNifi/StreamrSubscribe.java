@@ -47,12 +47,12 @@ import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
 @Tags({"Subscribe, Streamr, IOT"})
-@CapabilityDescription("Provide a description")
+@CapabilityDescription("Processor for subscribing to a stream in Streamr.")
 @SeeAlso({})
-@ReadsAttributes({@ReadsAttribute(attribute="", description="")})
 @WritesAttributes({@WritesAttribute(attribute="", description="")})
 @InputRequirement(InputRequirement.Requirement.INPUT_FORBIDDEN)
 @TriggerSerially
+
 public class StreamrSubscribe extends AbstractProcessor {
     private StreamrClient client;
     private Stream stream;
@@ -65,7 +65,7 @@ public class StreamrSubscribe extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_API_KEY = new PropertyDescriptor
             .Builder().name("STREAMR_API_KEY")
             .displayName("Streamr api key")
-            .description("Profile API key for Streamr")
+            .description("Your Streamr accounts API key. Your Streamr API key can be found in Streamr's editor under your profile.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -75,7 +75,7 @@ public class StreamrSubscribe extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_STREAM_ID = new PropertyDescriptor
             .Builder().name("STREAMR_STREAM_ID")
             .displayName("Stream id")
-            .description("Streams ID")
+            .description("You can find your stream's ID in Streamr's editor. The stream has to be created before it can be used.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -151,7 +151,6 @@ public class StreamrSubscribe extends AbstractProcessor {
             subscribe();
         }
         transferQueue(session, context);
-        stream.getConfig();
     }
 
     private void transferQueue(ProcessSession session, final ProcessContext context) {
