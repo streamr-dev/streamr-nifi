@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e63522a4-d4d6-4d8e-adca-11a99c2906fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+            <state relative-caret-position="1410">
+              <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -226,7 +212,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.2546495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -302,8 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+        <state relative-caret-position="1410">
+          <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -107,7 +107,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         relationships.add(FAILURE);
         this.relationships = Collections.unmodifiableSet(relationships);
         this.log = getLogger();
-        this.messageQueue = new LinkedBlockingQueue<>(10000);
+        this.messageQueue = new LinkedBlockingQueue<>(100);
         this.subscribed = false;
     }
 
