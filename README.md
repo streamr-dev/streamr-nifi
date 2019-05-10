@@ -59,4 +59,4 @@ If the ConvertRecord processors display an error, it's most likely because the c
 
 
 ## Known Issues
-If you get a NullPointerException after a NiFi restart on the processors, simply stopping and starting the processor with the arror should get fix the issue.
+If you get a NullPointerException after a NiFi restart on the processors, simply stopping and starting the processor with the error should get fix the issue.

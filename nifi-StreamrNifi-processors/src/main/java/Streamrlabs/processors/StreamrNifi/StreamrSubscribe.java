@@ -33,16 +33,13 @@ import org.apache.nifi.annotation.lifecycle.OnScheduled;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
 import org.apache.nifi.annotation.documentation.SeeAlso;
 import org.apache.nifi.annotation.documentation.Tags;
-import org.apache.nifi.flowfile.attributes.CoreAttributes;
 import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.io.OutputStreamCallback;
-import org.apache.nifi.processor.io.StreamCallback;
 import org.apache.nifi.processor.util.StandardValidators;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -123,26 +120,25 @@ public class StreamrSubscribe extends AbstractProcessor {
 
     @OnScheduled
     public void onScheduled(final ProcessContext context) {
-        setNewStreamrClient(context);
-        setStream(context);
-
-        subscribe();
+        setNewStreamrClient(context); // Set the streamr client
+        setStream(context); // Find and set the stream to be subscribed to
+        subscribe(); // subscribe to this.stream
     }
 
     @OnUnscheduled
     public void onUnscheduled(final ProcessContext context) {
         if (messageQueue != null && !messageQueue.isEmpty()) {
-            this.messageQueue.clear();
+            this.messageQueue.clear(); // clear queue to avoid memory leaks
         }
-        unsubscribe();
+        unsubscribe(); // Unsubscribe from this.stream
     }
 
     @OnStopped
     public void onStopped(final ProcessSession context) throws  IOException {
         if (messageQueue != null && !messageQueue.isEmpty()) {
-            this.messageQueue.clear();
+            this.messageQueue.clear(); // clear queue to avoid memory leaks
         }
-        unsubscribe();
+        unsubscribe(); // Unsubscribe from this.stream
     }
 
     @Override
@@ -153,30 +149,32 @@ public class StreamrSubscribe extends AbstractProcessor {
         transferQueue(session, context);
     }
 
+    // Method used to transfer the messageQueue contents forward in the flow.
     private void transferQueue(ProcessSession session, final ProcessContext context) {
         while (!messageQueue.isEmpty()) {
             FlowFile flow = session.create();
             try {
-                final StreamMessage streamMsg = messageQueue.poll();
+                final StreamMessage streamMsg = messageQueue.poll(); // Take the first StreamMessage in the queue
+                // Add metadata to the flow files attributes from Streamr
                 Map<String, String> attrs = new HashMap<>();
                 attrs.put("streamrMsg.timestamp", Long.toString(streamMsg.getTimestamp()));
                 attrs.put("streamrMsg.version", Integer.toString(streamMsg.getVersion()));
                 attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
                 attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
                 attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
-
                 flow = session.putAllAttributes(flow, attrs);
+
                 flow = session.write(flow, new OutputStreamCallback() {
                     @Override
                     public void process(OutputStream out) throws IOException {
-                        out.write(streamMsg.getSerializedContent().getBytes());
+                        out.write(streamMsg.getSerializedContent().getBytes()); // Write the JSON string out as a byte stream
                     }
                 });
-
-                session.transfer(flow, SUCCESS);
-                session.commit();
+                session.transfer(flow, SUCCESS); // If no errors are encountered flow file is pushed to SUCCESS relationship
+                session.commit(); // Close the flow file "transaction"
             }
             catch (Exception e) {
+                // If errors occur in the try block the error is transferred to the FAILURE relationship
                 session.putAttribute(flow,"Error", e.toString());
                 flow = session.write(flow, new OutputStreamCallback() {
                     @Override
@@ -184,12 +182,13 @@ public class StreamrSubscribe extends AbstractProcessor {
                         out.write(e.toString().getBytes());
                     }
                 });
-                session.transfer(flow, FAILURE);
-                session.commit();
+                session.transfer(flow, FAILURE); // Error transfered to FAILURE relationship
+                session.commit(); // Close the flow file "transaction"
             }
         }
     }
 
+    // Set Streamr client for the
     private void setNewStreamrClient(final ProcessContext context) {
         try {
             this.client = new StreamrClient(new StreamrClientOptions(
@@ -202,11 +201,14 @@ public class StreamrSubscribe extends AbstractProcessor {
             System.out.println(e);
         }
     }
+
+    // Subscribe to this.stream
     private void subscribe() {
         this.sub = client.subscribe(this.stream, new MessageHandler() {
             @Override
             public void onMessage(Subscription subscription, StreamMessage streamMessage) {
                 try {
+                    // All messages are first pushed to the messageQueue and later pushed forward in the onTrigger functions
                     messageQueue.put(streamMessage);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -224,6 +226,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         }
     }
 
+    // Find a stream by ID set in properties
     private void setStream(final ProcessContext context) {
         try {
             this.stream = client.getStream(context.getProperty("STREAMR_STREAM_ID").getValue());

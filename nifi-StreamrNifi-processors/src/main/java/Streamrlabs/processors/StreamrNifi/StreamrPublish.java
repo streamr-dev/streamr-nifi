@@ -27,7 +27,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.*;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import static com.streamr.client.StreamrClient.State.Connected;
@@ -106,8 +105,8 @@ public class StreamrPublish extends AbstractProcessor {
 
     @OnScheduled
     public void onScheduled(final ProcessContext context) {
-        setNewStreamrClient(context);
-        setStream(context);
+        setNewStreamrClient(context); // Set client
+        setStream(context); // Find and set stream
     }
 
     @Override
@@ -116,35 +115,41 @@ public class StreamrPublish extends AbstractProcessor {
         if (flow == null) {
             return;
         }
+        // Check connection and reconnect if disconnected
         if (!client.getState().equals(Connected) && !client.getState().equals(Connecting)) {
             setNewStreamrClient(context);
             setStream(context);
         }
+
         final byte[] messageContent = new byte[(int) flow.getSize()];
         session.read(flow, new InputStreamCallback() {
             @Override
             public void process(InputStream in) throws IOException {
-                StreamUtils.fillBuffer(in, messageContent, true);
+                StreamUtils.fillBuffer(in, messageContent, true); // Reads the flow files contents
             }
         });
-        String json = new String(messageContent);
+        String json = new String(messageContent); // Transfer the bytes in to a JSON string
         final ObjectMapper mapper = new ObjectMapper();
         try {
-            LinkedHashMap<String, Object> msg = mapper.readValue(json, LinkedHashMap.class);
+            // If this fails the JSON string isn't valid and a transfer to the FAILURE relationship is done instead.
+            LinkedHashMap<String, Object> msg = mapper.readValue(json, LinkedHashMap.class); //convert the JSON string to Streamr's Java client format
             publish(msg);
-            session.transfer(flow, SUCCESS);
-            session.commit();
+            session.transfer(flow, SUCCESS); // Transfer the flow file to the SUCCESS relationships
+            session.commit(); // close the flow file "transaction"
         }
         catch (Exception e) {
-            session.transfer(flow, FAILURE);
-            session.commit();
+            // This should be reached if the input is not a valid JSON string
+            session.transfer(flow, FAILURE); // Transfer the flow file to the FAILURE relationships
+            session.commit(); // close the flow file "transaction"
         }
     }
 
+    // USed to publish valid JSON strings to Streamr
     private void publish(LinkedHashMap<String, Object> msg) {
         this.client.publish(this.stream, msg);
     }
 
+    // Sets a new Streamr client
     private void setNewStreamrClient(final ProcessContext context) {
         try {
             this.client = new StreamrClient(new StreamrClientOptions(
