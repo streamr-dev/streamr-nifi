@@ -36,8 +36,8 @@ import static com.streamr.client.StreamrClient.State.Connecting;
 @Tags({"Publish", "Streamr", "IOT"})
 @CapabilityDescription("Publishes a message to Streamr")
 @SeeAlso({})
-@ReadsAttributes({@ReadsAttribute(attribute="", description="")})
-@WritesAttributes({@WritesAttribute(attribute="", description="")})
+@ReadsAttributes({@ReadsAttribute(attribute="json msg to Streamr", description="Input in a one line, single entry JSON string")})
+@WritesAttributes({@WritesAttribute(attribute="json msg to Streamr", description="Input is directly outputted without changes")})
 @InputRequirement(Requirement.INPUT_REQUIRED)
 
 public class StreamrPublish extends AbstractProcessor {
@@ -50,7 +50,7 @@ public class StreamrPublish extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_API_KEY = new PropertyDescriptor
             .Builder().name("STREAMR_API_KEY")
             .displayName("Streamr api key")
-            .description("Profile API key for Streamr. Your Streamr API key can be found in Streamr's editor under your profile.")
+            .description("Your Streamr accounts API key. Your Streamr API key can be found in Streamr's editor in your profile.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -60,7 +60,7 @@ public class StreamrPublish extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_STREAM_ID = new PropertyDescriptor
             .Builder().name("STREAMR_STREAM_ID")
             .displayName("Stream id")
-            .description("You can find your stream's ID in Streamr's editor. The stream has to be created before it can be used.")
+            .description("You can find your stream's ID in Streamr's editor. You can also create a new stream in Streamr's editor if you haven't do not have a stream up.")
             .dynamic(true)
             .required(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -72,12 +72,12 @@ public class StreamrPublish extends AbstractProcessor {
 
     public static final Relationship SUCCESS = new Relationship
             .Builder().name("SUCCESS")
-            .description("Relationship")
+            .description("Relationship for successfully published JSON strings")
             .build();
 
     public static final Relationship FAILURE = new Relationship
             .Builder().name("FAILURE")
-            .description("Relationship")
+            .description("Relationship for failed publish processor inputs")
             .build();
 
 

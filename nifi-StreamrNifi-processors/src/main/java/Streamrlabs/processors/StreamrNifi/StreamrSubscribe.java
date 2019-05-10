@@ -49,7 +49,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 @Tags({"Subscribe, Streamr, IOT"})
 @CapabilityDescription("Processor for subscribing to a stream in Streamr.")
 @SeeAlso({})
-@WritesAttributes({@WritesAttribute(attribute="", description="")})
+@WritesAttributes({@WritesAttribute(attribute="json string msg from Streamr", description="A one line JSON String from Streamr")})
 @InputRequirement(InputRequirement.Requirement.INPUT_FORBIDDEN)
 @TriggerSerially
 
@@ -65,7 +65,7 @@ public class StreamrSubscribe extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_API_KEY = new PropertyDescriptor
             .Builder().name("STREAMR_API_KEY")
             .displayName("Streamr api key")
-            .description("Your Streamr accounts API key. Your Streamr API key can be found in Streamr's editor under your profile.")
+            .description("Your Streamr accounts API key. Your Streamr API key can be found in Streamr's editor in your profile.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -75,7 +75,7 @@ public class StreamrSubscribe extends AbstractProcessor {
     public static final PropertyDescriptor STREAMR_STREAM_ID = new PropertyDescriptor
             .Builder().name("STREAMR_STREAM_ID")
             .displayName("Stream id")
-            .description("You can find your stream's ID in Streamr's editor. The stream has to be created before it can be used.")
+            .description("You can find your stream's ID in Streamr's editor. You can also create a new stream in Streamr's editor if you haven't do not have a stream up.")
             .required(true)
             .dynamic(true)
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
@@ -83,12 +83,12 @@ public class StreamrSubscribe extends AbstractProcessor {
 
     public static final Relationship SUCCESS = new Relationship
             .Builder().name("SUCCESS")
-            .description("Relationship")
+            .description("Relationship for successfully received events from the streams")
             .build();
 
     public static final Relationship FAILURE = new Relationship
             .Builder().name("FAILURE")
-            .description("Relationship")
+            .description("Relationship for failed subscription events")
             .build();
 
     private List<PropertyDescriptor> descriptors;

@@ -11,7 +11,7 @@ After you have cloned the repository or downloaded the .nar file you have two op
 
 `ln -s {STREAMRNIFI_HOME}/nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar {NIFI_HOME}/libexec/lib`
 
-This way you do not need to update the .nar file to NiFi's directory every single time after compiling the processors. The source code for the processors is found in [/nifi-StreamrNifi-processors/src/main/java/Streamrlabs/processors/StreamrNifi](./nifi-StreamrNifi-processors/src/main/java/Streamrlabs/processors/StreamrNifi). After making changes you should use the commands `mvn clean install` or `mvn compile` to compile the updated .nar file. 
+This way you do not need to update the .nar file to NiFi's directory every single time after compiling the processors. After making changes you should use the commands `mvn clean install` or `mvn compile` to compile the updated .nar file. 
 
 ## Using the processors
 
