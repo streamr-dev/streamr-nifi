@@ -1,0 +1,153 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-StreamrNifi-nar
+
+
+From: 'an unknown organization'
+  - cglib (https://github.com/cglib/cglib/cglib) cglib:cglib:jar:3.2.10
+    License: ASF 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - java-util (https://github.com/jdereg/java-util) com.cedarsoftware:java-util:jar:1.8.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - json-io (https://github.com/jdereg/json-io) com.cedarsoftware:json-io:jar:2.4.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - FindBugs-jsr305 (http://findbugs.sourceforge.net/) com.google.code.findbugs:jsr305:jar:1.3.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - error-prone annotations (http://nexus.sonatype.org/oss-repository-hosting.html/error_prone_parent/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.1.3
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Guava: Google Core Libraries for Java (https://github.com/google/guava/guava) com.google.guava:guava:bundle:24.1-jre
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2ObjC Annotations (https://github.com/google/j2objc/) com.google.j2objc:j2objc-annotations:jar:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - concurrent-locks (http://maven.apache.org) com.googlecode.concurrent-locks:concurrent-locks:jar:1.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JSON.simple (http://code.google.com/p/json-simple/) com.googlecode.json-simple:json-simple:bundle:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spongy Castle (http://rtyley.github.io/spongycastle/) com.madgag.spongycastle:core:jar:1.58.0.0
+    License: Bouncy Castle Licence  (http://www.bouncycastle.org/licence.html)
+  - Spongy Castle (http://rtyley.github.io/spongycastle/) com.madgag.spongycastle:prov:jar:1.58.0.0
+    License: Bouncy Castle Licence  (http://www.bouncycastle.org/licence.html)
+  - Moshi (https://github.com/square/moshi/moshi) com.squareup.moshi:moshi:jar:1.6.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - moshi-adapters (https://github.com/square/moshi/moshi-adapters) com.squareup.moshi:moshi-adapters:jar:1.6.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OkHttp (https://github.com/square/okhttp/okhttp) com.squareup.okhttp3:okhttp:jar:3.10.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Okio (https://github.com/square/okio/) com.squareup.okio:okio:jar:2.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - client  com.streamr:client:jar:0.1-SNAPSHOT
+
+  - Checker Qual (http://checkerframework.org) org.checkerframework:checker-compat-qual:jar:2.0.0
+    License: GNU General Public License, version 2 (GPL2), with the classpath exception  (http://www.gnu.org/software/classpath/license.html)    License: The MIT License  (http://opensource.org/licenses/MIT)
+  - leveldbjni-all  org.ethereum:leveldbjni-all:bundle:1.18.3
+
+  - rocksdbjni  org.ethereum:rocksdbjni:jar:5.9.2
+
+  - solcJ-all  org.ethereum:solcJ-all:jar:0.4.25
+
+  - leveldb (http://github.com/dain/leveldb/leveldb) org.iq80.leveldb:leveldb:jar:0.7
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - leveldb-api (http://github.com/dain/leveldb/leveldb-api) org.iq80.leveldb:leveldb-api:jar:0.7
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Java-WebSocket (https://github.com/TooTallNate/Java-WebSocket) org.java-websocket:Java-WebSocket:jar:1.3.8
+    License: MIT License  (https://github.com/TooTallNate/Java-WebSocket/blob/master/LICENSE)
+  - IntelliJ IDEA Annotations (http://www.jetbrains.org) org.jetbrains:annotations:jar:13.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - org.jetbrains.kotlin:kotlin-stdlib (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib:jar:1.2.60
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - org.jetbrains.kotlin:kotlin-stdlib-common (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.2.60
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Apache NiFi Project' (http://nifi.apache.org/)
+  - nifi-StreamrNifi-processors (http://nifi.apache.org/nifi-nar-bundles/StreamrNifi/nifi-StreamrNifi-processors) Streamrlabs:nifi-StreamrNifi-processors:jar:1.0-SNAPSHOT
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (http://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.9.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - Apache Log4j API (http://logging.apache.org/log4j/2.x/log4j-api/) org.apache.logging.log4j:log4j-api:jar:2.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j Core (http://logging.apache.org/log4j/2.x/log4j-core/) org.apache.logging.log4j:log4j-core:jar:2.7
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Codehaus' (http://codehaus.org)
+  - Animal Sniffer Annotations (http://mojo.codehaus.org/animal-sniffer/animal-sniffer-annotations) org.codehaus.mojo:animal-sniffer-annotations:jar:1.14
+    License: MIT license  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'com.typesafe'
+  - config (https://github.com/typesafehub/config) com.typesafe:config:bundle:1.2.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Ethereum' (https://ethereum.org)
+  - ethereumj (https://github.com/ethereum/ethereumj) org.ethereum:ethereumj-core:jar:1.11.0-RELEASE
+    License: GNU Lesser General Public License v3.0  (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.9.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.9.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.9.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'headissue GmbH, Munich' (https://headissue.com)
+  - cache2k API (https://cache2k.org/cache2k-api) org.cache2k:cache2k-api:jar:1.2.1.Final
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0)
+  - cache2k implementation (https://cache2k.org/cache2k-core) org.cache2k:cache2k-core:jar:1.2.1.Final
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Joe Walnes, Henri Tremblay, Leonardo Mesquita'
+  - Objenesis (http://objenesis.org) org.objenesis:objenesis:jar:2.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'OW2' (http://www.ow2.org/)
+  - asm (http://asm.ow2.org/) org.ow2.asm:asm:jar:7.0
+    License: BSD  (http://asm.ow2.org/license.html)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - Logback Classic Module (http://logback.qos.ch/logback-classic) ch.qos.logback:logback-classic:jar:1.2.3
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
+  - Logback Core Module (http://logback.qos.ch/logback-core) ch.qos.logback:logback-core:jar:1.2.3
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
+
+From: 'Spring IO' (http://projects.spring.io/spring-framework)
+  - Spring AOP (https://github.com/spring-projects/spring-framework) org.springframework:spring-aop:jar:4.3.19.RELEASE
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Spring Beans (https://github.com/spring-projects/spring-framework) org.springframework:spring-beans:jar:4.3.19.RELEASE
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Spring Context (https://github.com/spring-projects/spring-framework) org.springframework:spring-context:jar:4.3.19.RELEASE
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Spring Core (https://github.com/spring-projects/spring-framework) org.springframework:spring-core:jar:4.3.19.RELEASE
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Spring Expression Language (SpEL) (https://github.com/spring-projects/spring-framework) org.springframework:spring-expression:jar:4.3.19.RELEASE
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Codec (http://commons.apache.org/codec/) commons-codec:commons-codec:jar:1.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Lang (http://commons.apache.org/lang/) commons-lang:commons-lang:jar:2.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Logging (http://commons.apache.org/logging) commons-logging:commons-logging:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Ant Core (http://ant.apache.org/) org.apache.ant:ant:jar:1.10.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Ant Launcher (http://ant.apache.org/) org.apache.ant:ant-launcher:jar:1.10.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Collections (http://commons.apache.org/proper/commons-collections/) org.apache.commons:commons-collections4:jar:4.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Lang (http://commons.apache.org/lang/) org.apache.commons:commons-lang3:jar:3.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Netty Project' (http://netty.io/)
+  - Netty/All-in-One (http://netty.io/netty-all/) io.netty:netty-all:jar:4.0.30.Final
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'xerial.org'
+  - snappy-java (https://github.com/xerial/snappy-java) org.xerial.snappy:snappy-java:bundle:1.1.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
