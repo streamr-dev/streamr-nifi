@@ -55,7 +55,7 @@ The example flow first subscribes to a stream, then converts the messages coming
 
 You can try out the example flow yourself by importing it from [here](./docs/Example.xml). (The example flow is included in the docs directory of the repository so you don't need to explicitly download it if you cloned the repo). After the download you need to right click the canvas of the flow and select upload template, then find and select the Example.xml. Now you can just drag the template icon from the toolbar at the top of the flow editor. And voilà the template flow should be imported on your canvas. After the template is imported, all you have to do to get it up and running is to set up the Streamr API keys, stream IDs and set a path for the PutFile Processor, if you wish to log possible publish failures. Then just start up all the stopped processors. You can also open up Streamr's editor to see if the stream is being published to.
 
-If the ConvertRecord processors display an error, it's most likely because the controllers are disabled. You should go to the properties of the processor and click on one of the arrows on the furthest tab on the right. The click on the small lightning icons to enable the controllers. Then try to start up the ConvertRecord processors.
+If the ConvertRecord processors display an error, it's most likely because the controllers are disabled. You should go to the properties of the processor and click on one of the arrows on the furthest tab on the right. Then click on the small lightning icons to enable the controllers. Now you can try to start up the ConvertRecord processors again.
 
 
 ## Known Issues
