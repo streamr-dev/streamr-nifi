@@ -30,6 +30,9 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import static com.streamr.client.StreamrClient.State.Connected;
+import static com.streamr.client.StreamrClient.State.Connecting;
+
 @Tags({"Publish", "Streamr", "IOT"})
 @CapabilityDescription("Publishes a message to Streamr")
 @SeeAlso({})
@@ -112,6 +115,10 @@ public class StreamrPublish extends AbstractProcessor {
         FlowFile flow = session.get();
         if (flow == null) {
             return;
+        }
+        if (!client.getState().equals(Connected) && !client.getState().equals(Connecting)) {
+            setNewStreamrClient(context);
+            setStream(context);
         }
         final byte[] messageContent = new byte[(int) flow.getSize()];
         session.read(flow, new InputStreamCallback() {

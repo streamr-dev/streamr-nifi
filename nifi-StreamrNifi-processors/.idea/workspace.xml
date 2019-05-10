@@ -2,10 +2,88 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/pom.xml" line="33" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" line="118" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e63522a4-d4d6-4d8e-adca-11a99c2906fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/Java-WebSocket-1.3.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/animal-sniffer-annotations-1.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/annotations-13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/ant-1.10.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/ant-launcher-1.10.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/asm-7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/cache2k-api-1.2.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/cache2k-core-1.2.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/cglib-3.2.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/checker-compat-qual-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/client-0.1-20190429.085957-10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/commons-codec-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/commons-collections4-4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/commons-lang-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/commons-lang3-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/commons-logging-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/concurrent-locks-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/config-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/core-1.58.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/error_prone_annotations-2.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/ethereumj-core-1.11.0-RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/guava-24.1-jre.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/j2objc-annotations-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/jackson-core-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/jackson-databind-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/java-util-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/json-io-2.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/json-simple-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/jsr305-1.3.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/kotlin-stdlib-1.2.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/kotlin-stdlib-common-1.2.60.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/leveldb-0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/leveldb-api-0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/leveldbjni-all-1.18.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/log4j-api-2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/log4j-core-2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/logback-classic-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/logback-core-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/moshi-1.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/moshi-adapters-1.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/netty-all-4.0.30.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-utils-1.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/objenesis-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/okhttp-3.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/okio-2.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/prov-1.58.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/rocksdbjni-5.9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/snappy-java-1.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/solcJ-all-0.4.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/spring-aop-4.3.19.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/spring-beans-4.3.19.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/spring-context-4.3.19.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/spring-core-4.3.19.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/spring-expression-4.3.19.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/test-classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/test-classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/test-classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/groovy-tests/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/groovy-tests/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest-output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/DEPENDENCIES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribeTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,11 +101,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
+            <state relative-caret-position="424">
+              <caret line="151" column="9" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,17 +122,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-end-line="50" />
+            <state relative-caret-position="235">
+              <caret line="118" column="51" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3180#3200#0" expanded="true" />
                 <element signature="e#3598#3599#0" expanded="true" />
                 <element signature="e#3639#3640#0" expanded="true" />
-                <element signature="e#5242#5243#0" expanded="true" />
+                <element signature="e#5549#5550#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +175,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" />
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" />
       </list>
     </option>
   </component>
@@ -212,14 +290,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.2546495" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.2546495" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.50209206" side_tool="true" visible="true" weight="0.2546495" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50209206" side_tool="true" visible="true" weight="0.2546495" />
+      <window_info id="Favorites" order="6" sideWeight="0.50209206" side_tool="true" weight="0.2546495" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -271,26 +350,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="151" column="9" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-end-line="50" />
+        <state relative-caret-position="235">
+          <caret line="118" column="51" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3180#3200#0" expanded="true" />
             <element signature="e#3598#3599#0" expanded="true" />
             <element signature="e#3639#3640#0" expanded="true" />
-            <element signature="e#5242#5243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="109" column="57" lean-forward="true" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5549#5550#0" expanded="true" />
           </folding>
         </state>
       </provider>
