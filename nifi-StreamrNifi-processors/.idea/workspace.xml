@@ -6,18 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e63522a4-d4d6-4d8e-adca-11a99c2906fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/classes/META-INF/bundled-dependencies/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" beforeDir="false" afterPath="$PROJECT_DIR$/../nifi-StreamrNifi-nar/target/nifi-StreamrNifi-nar-1.0-SNAPSHOT.nar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrPublish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/nifi-StreamrNifi-processors-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Streamrlabs.processors.StreamrNifi.StreamrSubscribeTest.xml" afterDir="false" />
@@ -38,11 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="1179">
+              <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,15 +52,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="446">
+              <caret line="135" column="25" selection-start-line="131" selection-start-column="8" selection-end-line="135" selection-end-column="25" />
               <folding>
-                <element signature="e#3180#3200#0" expanded="true" />
-                <element signature="e#3598#3599#0" expanded="true" />
-                <element signature="e#3639#3640#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6351#6352#0" expanded="true" />
                 <element signature="e#6404#6405#0" expanded="true" />
               </folding>
             </state>
@@ -74,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="47" />
+            <state relative-caret-position="484">
+              <caret line="71" selection-start-line="71" selection-end-line="75" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -108,13 +103,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/MyProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" />
         <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="323" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="809" />
   </component>
@@ -124,8 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +171,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,11 +217,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.2546495" />
-      <window_info id="Structure" order="1" sideWeight="0.50209206" side_tool="true" visible="true" weight="0.2546495" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48953974" visible="true" weight="0.2761087" />
+      <window_info id="Structure" order="1" sideWeight="0.51046026" side_tool="true" visible="true" weight="0.2761087" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -255,6 +249,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrMessageHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/nifi/nifi-api/1.9.2/nifi-api-1.9.2-sources.jar!/org/apache/nifi/processor/AbstractProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/streamr/client/0.1-SNAPSHOT/client-0.1-20190429.085957-10.jar!/com/streamr/client/protocol/message_layer/StreamMessage.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -269,36 +270,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/nifi/nifi-api/1.9.2/nifi-api-1.9.2-sources.jar!/org/apache/nifi/processor/AbstractProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="446">
+          <caret line="135" column="25" selection-start-line="131" selection-start-column="8" selection-end-line="135" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+            <element signature="e#6404#6405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="47" />
+        <state relative-caret-position="484">
+          <caret line="71" selection-start-line="71" selection-end-line="75" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrSubscribe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Streamrlabs/processors/StreamrNifi/StreamrPublish.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="1179">
+          <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
           <folding>
-            <element signature="e#3180#3200#0" expanded="true" />
-            <element signature="e#3598#3599#0" expanded="true" />
-            <element signature="e#3639#3640#0" expanded="true" />
-            <element signature="e#6404#6405#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

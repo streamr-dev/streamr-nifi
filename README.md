@@ -57,6 +57,5 @@ You can try out the example flow yourself by importing it from [here](./docs/Exa
 
 If the ConvertRecord processors display an error, it's most likely because the controllers are disabled. You should go to the properties of the processor and click on one of the arrows on the furthest tab on the right. Then click on the small lightning icons to enable the controllers. Now you can try to start up the ConvertRecord processors again.
 
-
 ## Known Issues
 If you get a NullPointerException after a NiFi restart on the processors, simply stopping and starting the processor with the error should get fix the issue.

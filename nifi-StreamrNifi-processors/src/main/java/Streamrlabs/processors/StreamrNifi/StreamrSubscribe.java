@@ -16,6 +16,7 @@
  */
 package Streamrlabs.processors.StreamrNifi;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.streamr.client.MessageHandler;
 import com.streamr.client.StreamrClient;
 import com.streamr.client.Subscription;
@@ -78,6 +79,17 @@ public class StreamrSubscribe extends AbstractProcessor {
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .build();
 
+    public static final PropertyDescriptor METADATA = new PropertyDescriptor
+            .Builder().name("METADATA")
+            .displayName("Metadata")
+            .description("If true, all Streamr metadata is included to the flow file's content. If timestamp, only the Streamr timestamp is included to the content")
+            .required(true)
+            .allowableValues("true", "false", "timestamp")
+            .dynamic(true)
+            .defaultValue("false")
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+            .build();
+
     public static final Relationship SUCCESS = new Relationship
             .Builder().name("SUCCESS")
             .description("Relationship for successfully received events from the streams")
@@ -97,6 +109,7 @@ public class StreamrSubscribe extends AbstractProcessor {
         final List<PropertyDescriptor> descriptors = new ArrayList<PropertyDescriptor>();
         descriptors.add(STREAMR_STREAM_ID);
         descriptors.add(STREAMR_API_KEY);
+        descriptors.add(METADATA);
 
         this.descriptors = Collections.unmodifiableList(descriptors);
         final Set<Relationship> relationships = new HashSet<>();
@@ -156,18 +169,25 @@ public class StreamrSubscribe extends AbstractProcessor {
             try {
                 final StreamMessage streamMsg = messageQueue.poll(); // Take the first StreamMessage in the queue
                 // Add metadata to the flow files attributes from Streamr
-                Map<String, String> attrs = new HashMap<>();
-                attrs.put("streamrMsg.timestamp", Long.toString(streamMsg.getTimestamp()));
-                attrs.put("streamrMsg.version", Integer.toString(streamMsg.getVersion()));
-                attrs.put("streamrMsg.streamId", streamMsg.getStreamId());
-                attrs.put("streamrMsg.publisherId", streamMsg.getPublisherId());
-                attrs.put("streamrMsg.sequenceNumber", Long.toString(streamMsg.getSequenceNumber()));
-                flow = session.putAllAttributes(flow, attrs);
+                Map<String, Object> data = streamMsg.getContent();
 
+                if (context.getProperty("METADATA").getValue().equals("true")) {
+                    data.put("timestamp", streamMsg.getTimestamp());
+                    data.put("version", streamMsg.getVersion());
+                    data.put("streamId", streamMsg.getStreamId());
+                    data.put("publisherId", streamMsg.getPublisherId());
+                    data.put("sequenceNumber", streamMsg.getSequenceNumber());
+                }
+                if (context.getProperty("METADATA").getValue().equals("timestamp")) {
+                    data.put("timestamp", streamMsg.getTimestamp());
+                }
+
+                ObjectMapper mapper = new ObjectMapper();
                 flow = session.write(flow, new OutputStreamCallback() {
                     @Override
                     public void process(OutputStream out) throws IOException {
-                        out.write(streamMsg.getSerializedContent().getBytes()); // Write the JSON string out as a byte stream
+                        String json = mapper.writeValueAsString(data);
+                        out.write(json.getBytes()); // Write the JSON string out as a byte stream
                     }
                 });
                 session.transfer(flow, SUCCESS); // If no errors are encountered flow file is pushed to SUCCESS relationship
